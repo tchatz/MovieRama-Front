@@ -1,0 +1,20 @@
+{
+  "name": "movierama-front",
+  "description": "Assignment",
+  "main": "index.html",
+  "authors": [
+    "Thomas Chatzidimitris <tchatz@icloud.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-timeago": "^0.4.3"
+  }
+}

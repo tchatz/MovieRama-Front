@@ -1,0 +1,29 @@
+<header class="container ng-scope" >
+    <div id="menu" class="navbar navbar-default">
+        <div class="navbar-header">
+<!--            <button class="btn btn-success navbar-toggle">
+                <span class="glyphicon glyphicon-chevron-down"></span>
+            </button>-->
+            <div class="navbar-brand">
+                <h4>MovieRama</h4>
+            </div>
+
+        </div>
+        <div class="navbar-collapse collapse"  style="height: 0px;" ng-controller="userController">
+            <!--            <div ng-if="isLoggedIn">Welcome back {{globals.currentUser.firstName}} {{globals.currentUser.lastName}}</div>-->
+            <ul class="nav navbar-nav navbar-right">
+                <li   ng-class="getClass('/')"><a href="#/">Home</a></li>
+                <li ng-if="!isLoggedIn" ng-class="getClass('/login')"><a href="#/login">Login</a></li>
+                <li ng-if="!isLoggedIn" ng-class="getClass('/register')"><a href="#/register">Sign up</a></li>
+                <li ng-if="isLoggedIn"   class="dropdown">
+                    <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{globals.currentUser.firstName}} {{globals.currentUser.lastName}}<span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#/addMovie">Add Movie</a></li>
+                        <li><a tabindex="-1" ng-click="logout()">Logout</a></li>
+                    </ul>
+
+                </li>				
+            </ul>
+        </div>
+    </div>
+</header>
