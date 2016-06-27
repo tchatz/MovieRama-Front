@@ -15,7 +15,7 @@
             ApiService.GetAllMovies()
                     .then(function (movies) {
                         if (movies.status.code == '3') {
-                            alert("s");
+                           
                             $http.defaults.headers.common['deftoken'] = movies.status.newToken;
                             $rootScope.globals.currentUser.token = movies.status.newToken;
                             $cookieStore.put('globals', $rootScope.globals);
